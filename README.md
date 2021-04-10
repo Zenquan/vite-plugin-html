@@ -33,4 +33,4 @@ export default defineConfig({
 ```
 
 **备注**
-为什么`options`参数是h`tmlWebpackPlugin`作为`key`，是因为跟打包使用的vue-cli中的`html-webpack-plugin`对应上
+为什么`options`参数是`htmlWebpackPlugin`作为`key`，是因为跟打包使用的vue-cli中的`html-webpack-plugin`对应上
