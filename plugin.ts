@@ -4,7 +4,14 @@ import {resolve} from 'path'
 import template from 'art-template'
 
 type HtmlVitePluginOptions = {
-
+  indexPath: string,
+  htmlWebpackPlugin: {
+    options: {
+      title: string,
+      pwa: boolean,
+      vite: boolean
+    }
+  }
 }
 
 export default function HtmlVitePlugin (
@@ -13,7 +20,7 @@ export default function HtmlVitePlugin (
 
   // 注入html模板数据
   const html: string = template(
-    resolve(__dirname, '../build/index.html')
+    resolve(__dirname, options.indexPath)
   , options)
 
   // 写入html
